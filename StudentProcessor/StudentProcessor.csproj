@@ -41,11 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Exceptions\StudentException.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="FileReader.cs" />
     <Compile Include="Interfaces\IReadFromFile.cs" />
+    <Compile Include="Operations\StudentOperation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Readers\CsvReader.cs" />
     <Compile Include="Tools\FieldParser.cs" />

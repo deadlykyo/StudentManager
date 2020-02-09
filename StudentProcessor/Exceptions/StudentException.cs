@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentProcessor.Exceptions
 {
-    public class StudentException
+    public class StudentException : Exception
     {
         public StudentException()
         {

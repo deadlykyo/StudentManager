@@ -6,19 +6,20 @@ namespace StudentModel.Entities
 {
     public class StudentEntity : IEntity
     {
-        public Stage Stage { get; set; }
+        public string Stage { get; set; }
         public string Name { get; set; }
-        public Gender Gender { get; set; }
+        public string Gender { get; set; }
         public DateTime LastUpdated { get; set; }
 
         public StudentEntity()
         {
-            Stage = Stage.None;
+            Stage = String.Empty;
+            Gender = String.Empty;
             Name = String.Empty;
             LastUpdated = new DateTime(1900, 1, 1, 0, 0, 0);
         }
 
-        public StudentEntity(Stage stage, string name, Gender gender, DateTime lastUpdated)
+        public StudentEntity(string stage, string name, string gender, DateTime lastUpdated)
         {
             Stage = stage;
             Name = name;
@@ -46,20 +47,4 @@ namespace StudentModel.Entities
             return result;
         }
     }
-
-    public enum Gender
-    {
-        Male = 2,
-        Female = 1
-    }
-
-    public enum Stage
-    {
-        None = 1,
-        Elementary = 2,
-        High = 3,
-        Kinder = 4,
-        University = 5
-    }
-
 }

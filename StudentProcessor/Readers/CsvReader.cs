@@ -27,8 +27,8 @@ namespace StudentProcessor.Readers
 
                     if (studentDataArray.Length == 4)
                     {
-                        var stage = FieldParser.ConvertToStage(studentDataArray[0]);
-                        var gender = FieldParser.ConvertToGender(studentDataArray[2]);
+                        var stage = studentDataArray[0];
+                        var gender = studentDataArray[2];
                         var lastModifiedDate = FieldParser.ConvertToDate(studentDataArray[3]);
                         student = new StudentEntity(stage, studentDataArray[1], gender, lastModifiedDate);
                         students.Add(student);

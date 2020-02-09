@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E4F79E59-69E8-4BC8-BD10-C54679030DBD}</ProjectGuid>
+    <ProjectGuid>{FA2304B4-35ED-48C2-9DDF-68A772D9986B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StudentModel</RootNamespace>
-    <AssemblyName>StudentModel</AssemblyName>
+    <RootNamespace>StudentProcessor</RootNamespace>
+    <AssemblyName>StudentProcessor</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,9 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\StudentEntity.cs" />
-    <Compile Include="Interfaces\IEntity.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Exceptions\StudentException.cs" />
+    <Compile Include="Interfaces\IReadFromFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Readers\CsvReader.cs" />
+    <Compile Include="Tools\FieldParser.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\StudentModel\StudentModel.csproj">
+      <Project>{e4f79e59-69e8-4bc8-bd10-c54679030dbd}</Project>
+      <Name>StudentModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

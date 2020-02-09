@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentModel
+namespace StudentProcessor
 {
     public class Class1
     {
